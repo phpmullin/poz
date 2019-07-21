@@ -1,0 +1,41 @@
+unit Unit7;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore,
+  dxSkinsDefaultPainters, cxTextEdit, cxMaskEdit, cxDropDownEdit, cxLookupEdit,
+  cxDBLookupEdit, cxDBLookupComboBox, Vcl.StdCtrls, Vcl.Mask, sMaskEdit, sEdit;
+
+type
+  TOtpravkaSMS = class(TForm)
+    Fam: TsEdit;
+    telefon: TsMaskEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Manager: TcxLookupComboBox;
+    Label5: TLabel;
+    Name1: TsEdit;
+    Otch: TsEdit;
+    Label6: TLabel;
+    Label7: TLabel;
+    Email: TsEdit;
+    ManagerPhone: TcxLookupComboBox;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  OtpravkaSMS: TOtpravkaSMS;
+
+implementation
+
+{$R *.dfm}
+
+end.

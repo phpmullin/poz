@@ -1,0 +1,556 @@
+object DBMore: TDBMore
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  Caption = #1055#1086#1076#1088#1086#1073#1085#1086#1089#1090#1080
+  ClientHeight = 575
+  ClientWidth = 445
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object sPanel1: TsPanel
+    Left = 0
+    Top = 534
+    Width = 445
+    Height = 41
+    Align = alBottom
+    TabOrder = 0
+    ExplicitLeft = 176
+    ExplicitTop = 512
+    ExplicitWidth = 185
+    object sButton1: TsButton
+      Left = 352
+      Top = 6
+      Width = 75
+      Height = 25
+      Caption = #1054#1050
+      TabOrder = 0
+      OnClick = sButton1Click
+    end
+    object sCheckBox1: TsCheckBox
+      Left = 8
+      Top = 6
+      Width = 110
+      Height = 17
+      Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1085#1080#1077
+      TabOrder = 1
+      OnClick = sCheckBox1Click
+    end
+  end
+  object cxDBVerticalGrid1: TcxDBVerticalGrid
+    Left = 0
+    Top = 0
+    Width = 445
+    Height = 534
+    BorderStyle = cxcbsNone
+    Align = alClient
+    LookAndFeel.NativeStyle = False
+    LookAndFeel.SkinName = 'UserSkin'
+    OptionsView.ScrollBars = ssVertical
+    OptionsView.RowHeaderWidth = 221
+    OptionsBehavior.AlwaysShowEditor = False
+    OptionsData.Editing = False
+    Navigator.Buttons.CustomButtons = <>
+    TabOrder = 1
+    DataController.DataSource = DataSource
+    ExplicitLeft = 88
+    ExplicitTop = 192
+    ExplicitWidth = 150
+    ExplicitHeight = 200
+    Version = 1
+    object cxDBVerticalGrid1checking: TcxDBEditorRow
+      Properties.Caption = #1063#1077#1082#1073#1086#1082#1089
+      Properties.DataBinding.FieldName = 'checking'
+      ID = 6
+      ParentID = -1
+      Index = 0
+      Version = 1
+    end
+    object cxDBVerticalGrid1time: TcxDBEditorRow
+      Properties.Caption = #1042#1088#1077#1084#1103
+      Properties.DataBinding.FieldName = 'time'
+      ID = 7
+      ParentID = -1
+      Index = 1
+      Version = 1
+    end
+    object cxDBVerticalGrid1date: TcxDBEditorRow
+      Properties.Caption = #1044#1072#1090#1072
+      Properties.DataBinding.FieldName = 'date'
+      ID = 8
+      ParentID = -1
+      Index = 2
+      Version = 1
+    end
+    object ClientRow: TcxCategoryRow
+      Properties.Caption = #1050#1083#1080#1077#1085#1090
+      ID = 55
+      ParentID = -1
+      Index = 3
+      Version = 1
+    end
+    object cxDBVerticalGrid1Fam: TcxDBEditorRow
+      Properties.Caption = #1060#1072#1084#1080#1083#1080#1103
+      Properties.DataBinding.FieldName = 'Fam'
+      ID = 9
+      ParentID = 55
+      Index = 0
+      Version = 1
+    end
+    object cxDBVerticalGrid1Name: TcxDBEditorRow
+      Properties.Caption = #1048#1084#1103
+      Properties.DataBinding.FieldName = 'Name'
+      ID = 10
+      ParentID = 55
+      Index = 1
+      Version = 1
+    end
+    object cxDBVerticalGrid1Otch: TcxDBEditorRow
+      Properties.Caption = #1054#1090#1095#1077#1089#1090#1074#1086
+      Properties.DataBinding.FieldName = 'Otch'
+      ID = 11
+      ParentID = 55
+      Index = 2
+      Version = 1
+    end
+    object cxDBVerticalGrid1tel: TcxDBEditorRow
+      Properties.Caption = #1058#1077#1083#1077#1092#1086#1085
+      Properties.DataBinding.FieldName = 'tel'
+      ID = 12
+      ParentID = 55
+      Index = 3
+      Version = 1
+    end
+    object cxDBVerticalGrid1email: TcxDBEditorRow
+      Properties.DataBinding.FieldName = 'email'
+      ID = 13
+      ParentID = 55
+      Index = 4
+      Version = 1
+    end
+    object cxDBVerticalGrid1PolID: TcxDBEditorRow
+      Properties.Caption = #1055#1086#1083
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'Id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Gender'
+        end>
+      Properties.EditProperties.ListSource = Module.Pol
+      Properties.DataBinding.FieldName = 'PolID'
+      ID = 45
+      ParentID = 55
+      Index = 5
+      Version = 1
+    end
+    object ObjectRow: TcxCategoryRow
+      Properties.Caption = #1054#1073#1098#1077#1082#1090
+      ID = 56
+      ParentID = -1
+      Index = 4
+      Version = 1
+    end
+    object cxDBVerticalGrid1Street: TcxDBEditorRow
+      Properties.Caption = #1059#1083#1080#1094#1072
+      Properties.DataBinding.FieldName = 'Street'
+      ID = 21
+      ParentID = 56
+      Index = 0
+      Version = 1
+    end
+    object cxDBVerticalGrid1Otdel_komunnID: TcxDBEditorRow
+      Properties.Caption = #1054#1090#1076#1077#1083#1100#1085#1072#1103' / '#1050#1086#1084#1084#1091#1085#1072#1083#1100#1085#1072#1103
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Name'
+        end>
+      Properties.EditProperties.ListSource = Module.DOtdelnaya_Komunalnaya
+      Properties.DataBinding.FieldName = 'Otdel_komunnID'
+      ID = 16
+      ParentID = 56
+      Index = 1
+      Version = 1
+    end
+    object cxDBVerticalGrid1metroID: TcxDBEditorRow
+      Properties.Caption = #1052#1077#1090#1088#1086
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'metro'
+        end>
+      Properties.EditProperties.ListSource = Form2.B_Metro
+      Properties.DataBinding.FieldName = 'metroID'
+      ID = 18
+      ParentID = 56
+      Index = 2
+      Version = 1
+    end
+    object cxDBVerticalGrid1Udal_metro: TcxDBEditorRow
+      Properties.Caption = #1059#1076#1072#1083#1077#1085#1085#1086#1089#1090#1100' '#1086#1090' '#1084#1077#1090#1088#1086
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'Udal_metro'
+      ID = 19
+      ParentID = 56
+      Index = 3
+      Version = 1
+    end
+    object cxDBVerticalGrid1Udal_metroPT: TcxDBEditorRow
+      Properties.Caption = #1044#1086#1073#1080#1088#1072#1090#1100#1089#1103' '#1076#1086' '#1076#1086#1084#1072
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Metro_PT'
+        end>
+      Properties.EditProperties.ListSource = Module.DMetroPT
+      Properties.DataBinding.FieldName = 'Udal_metroPT'
+      ID = 20
+      ParentID = 56
+      Index = 4
+      Version = 1
+    end
+    object cxDBVerticalGrid1etajy: TcxDBEditorRow
+      Properties.Caption = #1044#1086#1084
+      Properties.DataBinding.FieldName = 'etajy'
+      ID = 53
+      ParentID = 56
+      Index = 5
+      Version = 1
+    end
+    object cxDBVerticalGrid1S_house: TcxDBEditorRow
+      Properties.Caption = 'S '#1054#1073#1097#1072#1103
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'S_house'
+      ID = 22
+      ParentID = 56
+      Index = 6
+      Version = 1
+    end
+    object cxDBVerticalGrid1S_jilaya: TcxDBEditorRow
+      Properties.Caption = 'S '#1046#1080#1083#1072#1103
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'S_jilaya'
+      ID = 23
+      ParentID = 56
+      Index = 7
+      Version = 1
+    end
+    object cxDBVerticalGrid1S_chik: TcxDBEditorRow
+      Properties.Caption = 'S '#1050#1091#1093#1085#1080
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'S_chik'
+      ID = 24
+      ParentID = 56
+      Index = 8
+      Version = 1
+    end
+    object cxDBVerticalGrid1Komnat_izolID: TcxDBEditorRow
+      Properties.Caption = #1048#1079#1086#1083#1103#1094#1080#1103' '#1082#1086#1084#1085#1072#1090
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Komnata_name'
+        end>
+      Properties.EditProperties.ListSource = Module.DIzolirovan
+      Properties.DataBinding.FieldName = 'Komnat_izolID'
+      ID = 25
+      ParentID = 56
+      Index = 9
+      Version = 1
+    end
+    object cxDBVerticalGrid1Tip_domaID: TcxDBEditorRow
+      Properties.Caption = #1058#1080#1087' '#1076#1086#1084#1072
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Tipdoma_name'
+        end>
+      Properties.EditProperties.ListSource = Module.DTip_doma
+      Properties.DataBinding.FieldName = 'Tip_domaID'
+      ID = 26
+      ParentID = 56
+      Index = 10
+      Version = 1
+    end
+    object cxDBVerticalGrid1Etaj: TcxDBEditorRow
+      Properties.Caption = #1069#1090#1072#1078
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'Etaj'
+      ID = 27
+      ParentID = 56
+      Index = 11
+      Version = 1
+    end
+    object cxDBVerticalGrid1Etajnost: TcxDBEditorRow
+      Properties.Caption = #1069#1090#1072#1078#1085#1086#1089#1090#1100
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'Etajnost'
+      ID = 28
+      ParentID = 56
+      Index = 12
+      Version = 1
+    end
+    object cxDBVerticalGrid1LiftID: TcxDBEditorRow
+      Properties.Caption = #1051#1080#1092#1090#1086#1074
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Name'
+        end>
+      Properties.EditProperties.ListSource = Module.DLift
+      Properties.DataBinding.FieldName = 'LiftID'
+      ID = 34
+      ParentID = 56
+      Index = 13
+      Version = 1
+    end
+    object cxDBVerticalGrid1komnat: TcxDBEditorRow
+      Properties.Caption = #1050#1086#1084#1085#1072#1090
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'komnat'
+      ID = 15
+      ParentID = 56
+      Index = 14
+      Version = 1
+    end
+    object cxDBVerticalGrid1BathroomID: TcxDBEditorRow
+      Properties.Caption = #1058#1091#1072#1083#1077#1090
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Name'
+        end>
+      Properties.EditProperties.ListSource = Module.DBathroom
+      Properties.DataBinding.FieldName = 'BathroomID'
+      ID = 29
+      ParentID = 56
+      Index = 15
+      Version = 1
+    end
+    object cxDBVerticalGrid1Bathroom_kol: TcxDBEditorRow
+      Properties.Caption = #1050#1086#1083#1083#1080#1095#1077#1089#1090#1074#1086' '#1091#1073#1086#1088#1085#1099#1093
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'Bathroom_kol'
+      ID = 30
+      ParentID = 56
+      Index = 16
+      Version = 1
+    end
+    object cxDBVerticalGrid1BalkonID: TcxDBEditorRow
+      Properties.Caption = #1041#1072#1083#1082#1086#1085
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Name'
+        end>
+      Properties.EditProperties.ListSource = Module.DBalkon
+      Properties.DataBinding.FieldName = 'BalkonID'
+      ID = 31
+      ParentID = 56
+      Index = 17
+      Version = 1
+    end
+    object cxDBVerticalGrid1Balkon_kol: TcxDBEditorRow
+      Properties.Caption = #1050#1086#1083#1083#1080#1095#1077#1089#1090#1074#1086' '#1073#1072#1083#1082#1086#1085#1086#1074
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'Balkon_kol'
+      ID = 32
+      ParentID = 56
+      Index = 18
+      Version = 1
+    end
+    object cxDBVerticalGrid1PlitaID: TcxDBEditorRow
+      Properties.Caption = #1055#1083#1080#1090#1072
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Name_plita'
+        end>
+      Properties.EditProperties.ListSource = Module.DPlita
+      Properties.DataBinding.FieldName = 'PlitaID'
+      ID = 33
+      ParentID = 56
+      Index = 19
+      Version = 1
+    end
+    object cxDBVerticalGrid1Vsobstven_let: TcxDBEditorRow
+      Properties.Caption = #1042' '#1089#1086#1073#1089#1090#1074#1077#1085#1085#1086#1089#1090#1080
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'Vsobstven_let'
+      ID = 40
+      ParentID = 56
+      Index = 20
+      Version = 1
+    end
+    object cxDBVerticalGrid1propiska: TcxDBEditorRow
+      Properties.Caption = #1055#1088#1086#1087#1080#1089#1072#1085#1085#1086
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'propiska'
+      ID = 17
+      ParentID = 56
+      Index = 21
+      Version = 1
+    end
+    object cxDBVerticalGrid1kolSobV: TcxDBEditorRow
+      Properties.Caption = #1050#1086#1083'. '#1089#1086#1073#1089#1090#1074'.'
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'kolSobV'
+      ID = 42
+      ParentID = 56
+      Index = 22
+      Version = 1
+    end
+    object cxDBVerticalGrid1kolSobNL: TcxDBEditorRow
+      Properties.Caption = #1050#1086#1083'. '#1089#1086#1073#1089#1090#1074'. '#1085#1077#1089#1086#1074#1077#1088#1096#1077#1085'.'
+      Properties.EditPropertiesClassName = 'TcxTextEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.DataBinding.FieldName = 'kolSobNL'
+      ID = 43
+      ParentID = 56
+      Index = 23
+      Version = 1
+    end
+    object cxDBVerticalGrid1tip_sdelkiID: TcxDBEditorRow
+      Properties.Caption = #1058#1080#1087' '#1089#1076#1077#1083#1082#1080
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Name_tip_sdelki'
+        end>
+      Properties.EditProperties.ListSource = Module.DAlternativa
+      Properties.DataBinding.FieldName = 'tip_sdelkiID'
+      ID = 41
+      ParentID = -1
+      Index = 5
+      Version = 1
+    end
+    object cxDBVerticalGrid1tipdogovoraID: TcxDBEditorRow
+      Properties.Caption = #1058#1080#1087' '#1076#1086#1075#1086#1074#1086#1088#1072
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'uslugi'
+        end>
+      Properties.EditProperties.ListSource = Module.DTip_dogovora
+      Properties.DataBinding.FieldName = 'tipdogovoraID'
+      ID = 14
+      ParentID = -1
+      Index = 6
+      Version = 1
+    end
+    object cxDBVerticalGrid1Rub: TcxDBEditorRow
+      Properties.Caption = #1057#1090#1086#1080#1084#1086#1089#1090#1100
+      Properties.EditPropertiesClassName = 'TcxCurrencyEditProperties'
+      Properties.EditProperties.Alignment.Horz = taLeftJustify
+      Properties.EditProperties.DisplayFormat = ',0. '#1056#1091#1073'.;-,0. '#1056#1091#1073'.'
+      Properties.DataBinding.FieldName = 'Rub'
+      ID = 37
+      ParentID = -1
+      Index = 7
+      Version = 1
+    end
+    object cxDBVerticalGrid1ManagerID: TcxDBEditorRow
+      Properties.Caption = #1052#1077#1085#1077#1076#1078#1077#1088
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Nikname'
+        end>
+      Properties.EditProperties.ListSource = Module.DataSource1_Manager
+      Properties.DataBinding.FieldName = 'ManagerID'
+      ID = 36
+      ParentID = -1
+      Index = 8
+      Version = 1
+    end
+    object cxDBVerticalGrid1DocumentiID: TcxDBEditorRow
+      Properties.Caption = #1044#1086#1082#1091#1084#1077#1085#1090#1099
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Name_document'
+        end>
+      Properties.EditProperties.ListSource = Module.DDokumenti
+      Properties.DataBinding.FieldName = 'DocumentiID'
+      ID = 39
+      ParentID = -1
+      Index = 9
+      Version = 1
+    end
+    object cxDBVerticalGrid1vid_reklamiID: TcxDBEditorRow
+      Properties.Caption = #1042#1080#1076' '#1088#1077#1082#1083#1072#1084#1099
+      Properties.EditPropertiesClassName = 'TcxLookupComboBoxProperties'
+      Properties.EditProperties.KeyFieldNames = 'id'
+      Properties.EditProperties.ListColumns = <
+        item
+          FieldName = 'Vid_reklami'
+        end>
+      Properties.EditProperties.ListSource = Module.DataSource1_reklama
+      Properties.DataBinding.FieldName = 'vid_reklamiID'
+      ID = 44
+      ParentID = -1
+      Index = 10
+      Version = 1
+    end
+    object cxDBVerticalGrid1date_sozvon: TcxDBEditorRow
+      Properties.Caption = #1044#1072#1090#1072' '#1089#1086#1079#1074#1086#1085#1072
+      Properties.EditPropertiesClassName = 'TcxDateEditProperties'
+      Properties.DataBinding.FieldName = 'date_sozvon'
+      ID = 38
+      ParentID = -1
+      Index = 11
+      Version = 1
+    end
+    object cxDBVerticalGrid1Primechanie: TcxDBEditorRow
+      Properties.Caption = #1055#1088#1080#1084#1077#1095#1072#1085#1080#1077
+      Properties.EditPropertiesClassName = 'TcxMemoProperties'
+      Properties.DataBinding.FieldName = 'Primechanie'
+      ID = 35
+      ParentID = -1
+      Index = 12
+      Version = 1
+    end
+  end
+  object Query: TFDQuery
+    Left = 88
+    Top = 560
+  end
+  object DataSource: TDataSource
+    DataSet = Query
+    Left = 128
+    Top = 562
+  end
+end

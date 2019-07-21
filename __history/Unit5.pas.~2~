@@ -1,0 +1,38 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxStyles, dxSkinsCore, dxSkinsDefaultPainters,
+  cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator,
+  dxDateRanges, cxDataControllerConditionalFormattingRulesManagerDialog,
+  Data.DB, cxDBData, Vcl.StdCtrls, sButton, Vcl.ExtCtrls, sPanel, cxGridLevel,
+  cxClasses, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxGrid, dxBarCode, cxVGrid, cxDBVGrid, cxInplaceContainer;
+
+type
+  TForm5 = class(TForm)
+    sPanel1: TsPanel;
+    sButton1: TsButton;
+    cxDBVerticalGrid1: TcxDBVerticalGrid;
+    cxDBVerticalGrid1DBMultiEditorRow1: TcxDBMultiEditorRow;
+    cxDBVerticalGrid1CategoryRow1: TcxCategoryRow;
+    cxDBVerticalGrid1CategoryRow2: TcxCategoryRow;
+    cxDBVerticalGrid1DBEditorRow1: TcxDBEditorRow;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form5: TForm5;
+
+implementation
+
+{$R *.dfm}
+uses Unit3;
+
+end.

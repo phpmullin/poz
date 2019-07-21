@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.454,=C:\Users\Иван\Desktop\Новая папка (3)\Unit4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.945,=C:\Users\Иван\Desktop\Новая папка (3)\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.426,C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Project2.dproj=D:\Temp\mysql\Project2.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.364,=C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.226,=C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.382,=F:\Новая папка (3)\Unit6.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.255,C:\Users\Иван\Desktop\Новая папка (3)\Unit1.dfm=C:\Users\Иван\Desktop\Новая папка (3)\Server.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.248,C:\Users\Иван\Desktop\Новая папка (3)\Project2.dproj=C:\Users\Иван\Desktop\Новая папка (3)\Poz.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.081,=E:\Новая папка (3)\Unit7.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.094,=F:\Новая папка (3)\Unit5.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.826,=C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.146,=C:\Users\Иван\Desktop\Новая папка (3)\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.584,=C:\Users\Иван\Desktop\Новая папка (3)\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.255,C:\Users\Иван\Desktop\Новая папка (3)\Unit1.pas=C:\Users\Иван\Desktop\Новая папка (3)\Server.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.389,C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.dfm=D:\Temp\mysql\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.002,=C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.389,C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas=D:\Temp\mysql\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.301,=C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.653,=C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.117,=C:\Users\Mike\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

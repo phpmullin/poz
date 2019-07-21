@@ -1,0 +1,107 @@
+object Server_access: TServer_access
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Server_access'
+  ClientHeight = 275
+  ClientWidth = 253
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object sLabel1: TsLabel
+    Left = 35
+    Top = 40
+    Width = 41
+    Height = 13
+    Caption = #1057#1077#1088#1074#1077#1088':'
+  end
+  object sLabel2: TsLabel
+    Left = 49
+    Top = 66
+    Width = 27
+    Height = 13
+    Caption = #1041#1072#1079#1072':'
+  end
+  object sLabel3: TsLabel
+    Left = 42
+    Top = 109
+    Width = 34
+    Height = 13
+    Caption = #1051#1086#1075#1080#1085':'
+  end
+  object sLabel4: TsLabel
+    Left = 35
+    Top = 136
+    Width = 41
+    Height = 13
+    Caption = #1055#1072#1088#1086#1083#1100':'
+  end
+  object P_Server: TEdit
+    Left = 93
+    Top = 36
+    Width = 121
+    Height = 21
+    TabOrder = 0
+    Text = 'i90500e3.beget.tech'
+  end
+  object P_Base: TEdit
+    Left = 93
+    Top = 63
+    Width = 121
+    Height = 21
+    TabOrder = 1
+    Text = 'i90500e3_pozvon'
+  end
+  object P_Login: TEdit
+    Left = 93
+    Top = 106
+    Width = 121
+    Height = 21
+    TabOrder = 2
+    Text = 'i90500e3_pozvon'
+  end
+  object sButton1: TsButton
+    Left = 35
+    Top = 232
+    Width = 75
+    Height = 25
+    Caption = #1054#1090#1084#1077#1085#1080#1090#1100
+    TabOrder = 3
+    OnClick = sButton1Click
+  end
+  object sButton2: TsButton
+    Left = 139
+    Top = 232
+    Width = 75
+    Height = 25
+    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+    TabOrder = 4
+    OnClick = sButton2Click
+  end
+  object Server_connect: TButton
+    Left = 155
+    Top = 160
+    Width = 59
+    Height = 21
+    Caption = 'connect'
+    TabOrder = 5
+    OnClick = Server_connectClick
+  end
+  object P_Password: TMaskEdit
+    Left = 93
+    Top = 133
+    Width = 121
+    Height = 21
+    PasswordChar = '*'
+    TabOrder = 6
+    Text = '123123123'
+  end
+end

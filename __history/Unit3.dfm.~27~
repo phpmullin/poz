@@ -1,0 +1,362 @@
+object Module: TModule
+  OldCreateOrder = False
+  Height = 585
+  Width = 904
+  object FDQuery1: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT * FROM Vid_reklami ORDER BY Vid_reklami')
+    Left = 24
+    Top = 19
+  end
+  object DataSource1_reklama: TDataSource
+    DataSet = FDQuery1
+    Left = 24
+    Top = 64
+  end
+  object DataSource1_usluga: TDataSource
+    DataSet = FDQuery2
+    Left = 56
+    Top = 64
+  end
+  object FDQuery2: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT * FROM Usluga ORDER BY Name_uslugi')
+    Left = 56
+    Top = 19
+  end
+  object DataSource1_Manager: TDataSource
+    DataSet = FDQuery3
+    Left = 88
+    Top = 64
+  end
+  object FDQuery3: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT * FROM Manager ORDER BY Nikname')
+    Left = 88
+    Top = 19
+  end
+  object Pol: TDataSource
+    DataSet = FDQuery4
+    Left = 119
+    Top = 64
+  end
+  object FDQuery4: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT * FROM Pol ORDER BY Socr')
+    Left = 120
+    Top = 19
+  end
+  object Pozvonochnik: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM Pozvonochnik')
+    Left = 272
+    Top = 27
+  end
+  object Uridicheskaya: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM uridicheskaya')
+    Left = 112
+    Top = 171
+  end
+  object DUridicheskaya: TDataSource
+    DataSet = Uridicheskaya
+    Left = 115
+    Top = 216
+  end
+  object Tip_dogovora: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT * FROM tip_dogovor_ur ORDER BY Uslugi')
+    Left = 16
+    Top = 171
+  end
+  object DTip_dogovora: TDataSource
+    DataSet = Tip_dogovora
+    Left = 16
+    Top = 216
+  end
+  object QOtdelnaya_Komunalnaya: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT id, Name  FROM Otdel_kommun ORDER BY Name')
+    Left = 56
+    Top = 168
+  end
+  object DOtdelnaya_Komunalnaya: TDataSource
+    DataSet = QOtdelnaya_Komunalnaya
+    Left = 56
+    Top = 216
+  end
+  object QMetroPT: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT *  FROM b_metro_pt ORDER BY Socr')
+    Left = 488
+    Top = 24
+  end
+  object DMetroPT: TDataSource
+    DataSet = QMetroPT
+    Left = 488
+    Top = 72
+  end
+  object QIzolirovan: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT *  FROM Komnata')
+    Left = 536
+    Top = 24
+  end
+  object DIzolirovan: TDataSource
+    DataSet = QIzolirovan
+    Left = 536
+    Top = 72
+  end
+  object QTip_doma: TFDQuery
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT * FROM Tip_doma')
+    Left = 584
+    Top = 24
+  end
+  object DTip_doma: TDataSource
+    DataSet = QTip_doma
+    Left = 584
+    Top = 72
+  end
+  object QBathroom: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT * FROM Bathroom')
+    Left = 624
+    Top = 24
+  end
+  object DBathroom: TDataSource
+    DataSet = QBathroom
+    Left = 624
+    Top = 72
+  end
+  object QBalkon: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT *  FROM Balkon')
+    Left = 664
+    Top = 24
+  end
+  object DBalkon: TDataSource
+    DataSet = QBalkon
+    Left = 664
+    Top = 72
+  end
+  object QPlita: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT *  FROM Plita')
+    Left = 704
+    Top = 24
+  end
+  object DPlita: TDataSource
+    DataSet = QPlita
+    Left = 704
+    Top = 72
+  end
+  object QLift: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT *  FROM Lift')
+    Left = 736
+    Top = 24
+  end
+  object DLift: TDataSource
+    DataSet = QLift
+    Left = 736
+    Top = 72
+  end
+  object QDokumenti: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT *  FROM Documenti')
+    Left = 776
+    Top = 24
+  end
+  object DDokumenti: TDataSource
+    DataSet = QDokumenti
+    Left = 776
+    Top = 72
+  end
+  object QAlternativa: TFDQuery
+    Active = True
+    IndexesActive = False
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT DISTINCT *  FROM Tip_sdelki')
+    Left = 808
+    Top = 24
+  end
+  object DAlternativa: TDataSource
+    DataSet = QAlternativa
+    Left = 808
+    Top = 72
+  end
+  object QRieltorskaya: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM rieltorskaya')
+    Left = 432
+    Top = 27
+  end
+  object DRieltorskaya: TDataSource
+    DataSet = QRieltorskaya
+    Left = 435
+    Top = 72
+  end
+  object QZagorodRieltorskaya: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM ZagorodRieltorskaya')
+    Left = 440
+    Top = 163
+  end
+  object DZagorodRieltorskaya: TDataSource
+    DataSet = QZagorodRieltorskaya
+    Left = 443
+    Top = 216
+  end
+  object QZShosseID: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM ZShosee')
+    Left = 488
+    Top = 163
+  end
+  object ZShosseID: TDataSource
+    DataSet = QZShosseID
+    Left = 491
+    Top = 216
+  end
+  object QZGasID: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM ZGas')
+    Left = 536
+    Top = 163
+  end
+  object ZGasID: TDataSource
+    DataSet = QZGasID
+    Left = 539
+    Top = 216
+  end
+  object QZElectroID: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM ZElectro')
+    Left = 576
+    Top = 163
+  end
+  object ZElectroID: TDataSource
+    DataSet = QZElectroID
+    Left = 579
+    Top = 216
+  end
+  object QZVoda: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM ZVoda')
+    Left = 616
+    Top = 163
+  end
+  object ZVoda: TDataSource
+    DataSet = QZVoda
+    Left = 619
+    Top = 216
+  end
+  object QZkanalizaciya: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM Zkanalizaciya')
+    Left = 656
+    Top = 163
+  end
+  object Zkanalizaciya: TDataSource
+    DataSet = QZkanalizaciya
+    Left = 659
+    Top = 216
+  end
+  object QZmat_sten: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM Zmat_sten')
+    Left = 696
+    Top = 163
+  end
+  object Zmat_sten: TDataSource
+    DataSet = QZmat_sten
+    Left = 699
+    Top = 216
+  end
+  object QZOtoplenie: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM ZOtoplenie')
+    Left = 736
+    Top = 163
+  end
+  object ZOtoplenie: TDataSource
+    DataSet = QZOtoplenie
+    Left = 739
+    Top = 216
+  end
+  object QZPodezdi: TFDQuery
+    Active = True
+    Connection = Form2.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM ZPodezdi')
+    Left = 776
+    Top = 163
+  end
+  object DZPodezdi: TDataSource
+    DataSet = QZPodezdi
+    Left = 779
+    Top = 216
+  end
+end

@@ -1,0 +1,646 @@
+unit Unit4;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore, dxSkinBlack,
+  dxSkinBlue, dxSkinBlueprint, dxSkinCaramel, dxSkinCoffee, dxSkinDarkRoom,
+  dxSkinDarkSide, dxSkinDevExpressDarkStyle, dxSkinDevExpressStyle, dxSkinFoggy,
+  dxSkinGlassOceans, dxSkinHighContrast, dxSkiniMaginary, dxSkinLilian,
+  dxSkinLiquidSky, dxSkinLondonLiquidSky, dxSkinMcSkin, dxSkinMetropolis,
+  dxSkinMetropolisDark, dxSkinMoneyTwins, dxSkinOffice2007Black,
+  dxSkinOffice2007Blue, dxSkinOffice2007Green, dxSkinOffice2007Pink,
+  dxSkinOffice2007Silver, dxSkinOffice2010Black, dxSkinOffice2010Blue,
+  dxSkinOffice2010Silver, dxSkinOffice2013DarkGray, dxSkinOffice2013LightGray,
+  dxSkinOffice2013White, dxSkinOffice2016Colorful, dxSkinOffice2016Dark,
+  dxSkinPumpkin, dxSkinSeven, dxSkinSevenClassic, dxSkinSharp, dxSkinSharpPlus,
+  dxSkinSilver, dxSkinSpringTime, dxSkinStardust, dxSkinSummer2008,
+  dxSkinTheAsphaltWorld, dxSkinsDefaultPainters, dxSkinValentine,
+  dxSkinVisualStudio2013Blue, dxSkinVisualStudio2013Dark,
+  dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint,
+  dxSkinXmas2008Blue, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, Data.DB,
+  FireDAC.Comp.DataSet, FireDAC.Comp.Client, cxTextEdit, cxMaskEdit,
+  cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox,
+  Vcl.StdCtrls, sButton, sGroupBox, sLabel, sEdit, sSpinEdit, Vcl.Mask,
+  sMaskEdit, sCustomComboEdit, sToolEdit, sMemo, Vcl.ExtCtrls, sPanel,
+  Vcl.ComCtrls, sPageControl, sRadioButton, sComboBox, sCheckBox, Vcl.WinXCtrls,
+  cxCheckBox, dxToggleSwitch, acSlider, dxCore, cxDateUtils, cxCalendar,
+  cxSpinEdit, cxCurrencyEdit, System.ImageList, Vcl.ImgList, cxImageList,
+  Vcl.WinXPickers, cxTimeEdit;
+
+type
+  TAddUr = class(TForm)
+    Query: TFDQuery;
+    sPageControl1: TsPageControl;
+    sTabK: TsTabSheet;
+    sTabZag: TsTabSheet;
+    sTabKom: TsTabSheet;
+    sTabUr: TsTabSheet;
+    Label12: TLabel;
+    Tip_dogovora: TcxLookupComboBox;
+    Label9: TLabel;
+    Label11: TLabel;
+    Otdel_komun: TcxLookupComboBox;
+    Label14: TLabel;
+    Label13: TLabel;
+    sMemo1: TsMemo;
+    Label2: TLabel;
+    sGroupBox1: TsGroupBox;
+    Label1: TLabel;
+    Label5: TLabel;
+    sLabel1: TsLabel;
+    Label6: TLabel;
+    Label10: TLabel;
+    Fam: TsEdit;
+    sMaskEdit1: TsMaskEdit;
+    Name1: TsEdit;
+    Otch: TsEdit;
+    sRadioGroup1: TsRadioGroup;
+    email: TsEdit;
+    Label8: TLabel;
+    Manager: TcxLookupComboBox;
+    Label4: TLabel;
+    reklama: TcxLookupComboBox;
+    Label7: TLabel;
+    Label3: TLabel;
+    sPanel1: TsPanel;
+    sButton3: TsButton;
+    sButton1: TsButton;
+    Save_button: TsButton;
+    sRadioButton1: TsRadioButton;
+    sRadioButton2: TsRadioButton;
+    Combo_Tip_Dogovora: TcxLookupComboBox;
+    Combo_Otdelnaya: TcxLookupComboBox;
+    Combo_Metro: TcxLookupComboBox;
+    Edit_street: TsEdit;
+    Combo_Metro_PT: TcxLookupComboBox;
+    Combo_Izolaciya: TcxLookupComboBox;
+    Combo_Tip_doma: TcxLookupComboBox;
+    Combo_Bathroom: TcxLookupComboBox;
+    Combo_Balkon: TcxLookupComboBox;
+    Combo_Plita: TcxLookupComboBox;
+    Combo_Lift: TcxLookupComboBox;
+    Combo_Alternativa: TcxLookupComboBox;
+    Combo_Documenti: TcxLookupComboBox;
+    sLabel2: TsLabel;
+    sLabel3: TsLabel;
+    sLabel4: TsLabel;
+    sLabel5: TsLabel;
+    sLabel6: TsLabel;
+    sLabel7: TsLabel;
+    sLabel8: TsLabel;
+    sLabel9: TsLabel;
+    sLabel10: TsLabel;
+    sLabel13: TsLabel;
+    sLabel14: TsLabel;
+    sLabel16: TsLabel;
+    sLabel17: TsLabel;
+    sLabel18: TsLabel;
+    sLabel19: TsLabel;
+    sLabel20: TsLabel;
+    sLabel21: TsLabel;
+    sLabel22: TsLabel;
+    sLabel23: TsLabel;
+    sLabel24: TsLabel;
+    sLabel25: TsLabel;
+    sLabel11: TsLabel;
+    sLabel12: TsLabel;
+    sLabel15: TsLabel;
+    sLabel27: TsLabel;
+    Primechanie: TsMemo;
+    sLabel28: TsLabel;
+    sLabel29: TsLabel;
+    sLabel30: TsLabel;
+    ZCombo_Tip_Dogovora: TcxLookupComboBox;
+    sLabel31: TsLabel;
+    ZShosse: TcxLookupComboBox;
+    sLabel32: TsLabel;
+    sLabel33: TsLabel;
+    sLabel34: TsLabel;
+    ZNaselen_punkt: TsEdit;
+    ZStanciyaJD: TsEdit;
+    sLabel35: TsLabel;
+    sLabel36: TsLabel;
+    sLabel38: TsLabel;
+    sLabel37: TsLabel;
+    ZGaz: TcxLookupComboBox;
+    sLabel39: TsLabel;
+    sLabel40: TsLabel;
+    ZEletrichestvo: TcxLookupComboBox;
+    ZVoda: TcxLookupComboBox;
+    sLabel41: TsLabel;
+    ZKanalizaciya: TcxLookupComboBox;
+    sLabel42: TsLabel;
+    sLabel43: TsLabel;
+    ZOtoplenie: TcxLookupComboBox;
+    sLabel44: TsLabel;
+    ZKoment: TsMemo;
+    sLabel45: TsLabel;
+    ZMat_sten: TcxLookupComboBox;
+    sLabel46: TsLabel;
+    sLabel47: TsLabel;
+    ZPodjezd: TcxLookupComboBox;
+    ZCombo_Documenti: TcxLookupComboBox;
+    sLabel48: TsLabel;
+    sLabel49: TsLabel;
+    sLabel50: TsLabel;
+    sLabel51: TsLabel;
+    sLabel58: TsLabel;
+    sLabel60: TsLabel;
+    sLabel68: TsLabel;
+    sLabel69: TsLabel;
+    KCombo_Tip_Dogovora: TcxLookupComboBox;
+    sLabel70: TsLabel;
+    KKoment: TsMemo;
+    sLabel67: TsLabel;
+    KCombo_Metro: TcxLookupComboBox;
+    sLabel52: TsLabel;
+    sLabel53: TsLabel;
+    sLabel54: TsLabel;
+    sLabel71: TsLabel;
+    KEdit_street: TsEdit;
+    sLabel55: TsLabel;
+    sLabel56: TsLabel;
+    sLabel57: TsLabel;
+    KCombo_TipDoma: TcxLookupComboBox;
+    sLabel63: TsLabel;
+    KCombo_Bathroom: TcxLookupComboBox;
+    sLabel64: TsLabel;
+    KCombo_Balkon: TcxLookupComboBox;
+    sLabel65: TsLabel;
+    sLabel66: TsLabel;
+    KCombo_Naznachenie: TcxLookupComboBox;
+    sLabel72: TsLabel;
+    sLabel73: TsLabel;
+    KCombo_TipZdaniya: TcxLookupComboBox;
+    sLabel74: TsLabel;
+    KCombo_Class: TcxLookupComboBox;
+    SliderOtchet: TsSlider;
+    Label15: TLabel;
+    Label16: TLabel;
+    Combo_Komnat: TcxComboBox;
+    Combo_Propisanno: TcxComboBox;
+    Combo_Sanuzel_kol: TcxSpinEdit;
+    Combo_Balkon_kol: TcxSpinEdit;
+    Combo_sobstv_kids: TcxComboBox;
+    sLabel26: TsLabel;
+    Edit_Rub: TcxCurrencyEdit;
+    ZEdit_Rub: TcxCurrencyEdit;
+    KEdit_Rub: TcxCurrencyEdit;
+    Stoimost_rub: TcxCurrencyEdit;
+    Edit_Etaj: TcxSpinEdit;
+    Edit_Etajnost: TcxSpinEdit;
+    cxImageList1: TcxImageList;
+    Edit_S_ob: TcxCurrencyEdit;
+    Edit_S_jil: TcxCurrencyEdit;
+    Edit_S_Kuh: TcxCurrencyEdit;
+    Edit_Vsobstven: TcxSpinEdit;
+    Edit_Metro_Min: TcxSpinEdit;
+    ZSUchastka: TcxCurrencyEdit;
+    ZSDoma: TcxCurrencyEdit;
+    ZUdal_JD: TcxCurrencyEdit;
+    ZUdal: TcxCurrencyEdit;
+    ZEdit_Vsobstven: TcxSpinEdit;
+    ZEtajnost: TcxSpinEdit;
+    KEdit_Etaj: TcxSpinEdit;
+    KEdit_Etajnost: TcxSpinEdit;
+    KSDoma: TcxCurrencyEdit;
+    KEdit_Metro_Min: TcxSpinEdit;
+    KCombo_Metro_PT: TcxLookupComboBox;
+    KCombo_Sanuzel_kol: TcxSpinEdit;
+    KCombo_Balkon_kol: TcxSpinEdit;
+    KEdit_Vsobstven: TcxSpinEdit;
+    KEdit_Electrika: TcxCurrencyEdit;
+    KCombo_Komnat: TcxSpinEdit;
+    Propisano: TcxSpinEdit;
+    sTimePicker1: TcxTimeEdit;
+    Combo_kol_sobst: TcxComboBox;
+    KCombo_kol_sobst: TcxComboBox;
+    KCombo_sobstv_kids: TcxComboBox;
+    sDateEdit1: TcxDateEdit;
+    Date_Sozvon_komnata: TcxDateEdit;
+    Date_sozvon: TcxDateEdit;
+    Label17: TLabel;
+    ZDate_sozvon: TcxDateEdit;
+    Label18: TLabel;
+    KDate_sozvon: TcxDateEdit;
+    procedure sButton3Click(Sender: TObject);
+    procedure Save_buttonClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure check_sobstv_kidsClick(Sender: TObject);
+    procedure sButton1Click(Sender: TObject);
+    procedure SliderOtchetChanging(Sender: TObject; var CanChange: Boolean);
+    procedure sMaskEdit1Change(Sender: TObject);
+    procedure Edit_EtajKeyPress(Sender: TObject; var Key: Char);
+    procedure Edit_EtajKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure Combo_sobstv_kidsPropertiesChange(Sender: TObject);
+    procedure Edit_EtajPropertiesChange(Sender: TObject);
+    procedure Edit_EtajnostPropertiesChange(Sender: TObject);
+    procedure Combo_Metro_PTPropertiesChange(Sender: TObject);
+    procedure Edit_S_jilEnter(Sender: TObject);
+    procedure Edit_S_obEnter(Sender: TObject);
+    procedure Edit_S_KuhEnter(Sender: TObject);
+    procedure Edit_S_obKeyPress(Sender: TObject; var Key: Char);
+    procedure Edit_S_obKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+    procedure KCombo_kol_sobstPropertiesChange(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  AddUr: TAddUr;
+
+implementation
+
+{$R *.dfm}
+
+uses Unit3,Unit2;
+
+procedure TAddUr.check_sobstv_kidsClick(Sender: TObject);
+begin
+//if check_sobstv_kids.Checked then Combo_sobstv_kids.Enabled:=true else Combo_sobstv_kids.Enabled:=false;
+end;
+
+procedure TAddUr.Combo_Metro_PTPropertiesChange(Sender: TObject);
+begin
+  Combo_Metro_PT.Properties.Images := cxImageList1;
+  Combo_Metro_PT.Properties.Buttons[0].Kind := bkGlyph;
+ //  Combo_Metro_PT.Properties.ButtonGlyph.
+ // Combo_Metro_PT.Properties.Buttons[0].ImageIndex := 1;
+end;
+
+procedure TAddUr.Combo_sobstv_kidsPropertiesChange(Sender: TObject);
+var kol:integer;
+begin
+if Combo_sobstv_kids.text='' then Combo_sobstv_kids.text:='0';
+if Combo_sobstv_kids.ItemIndex=0 then  kol:=0 else kol:=Combo_sobstv_kids.ItemIndex;
+if Combo_kol_sobst.ItemIndex<=kol then Combo_sobstv_kids.ItemIndex:=Combo_kol_sobst.ItemIndex;
+if Combo_kol_sobst.ItemIndex=0 then Combo_sobstv_kids.ItemIndex:=0;
+end;
+
+procedure TAddUr.Edit_EtajKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+if Key=46 then (Sender as TcxSpinEdit).value:=0;
+end;
+
+procedure TAddUr.Edit_EtajKeyPress(Sender: TObject; var Key: Char);
+begin
+if not (Key in ['0'..'9',#13,#8]) then Key:= #0;
+end;
+
+procedure TAddUr.Edit_EtajnostPropertiesChange(Sender: TObject);
+begin
+ if Edit_Etajnost.Value<Edit_Etaj.Value  then Edit_Etaj.value:=Edit_Etajnost.Value;
+end;
+
+procedure TAddUr.Edit_EtajPropertiesChange(Sender: TObject);
+begin
+if Edit_Etaj.Value>Edit_Etajnost.Value  then Edit_Etajnost.Value:=Edit_Etaj.value;
+end;
+
+procedure TAddUr.Edit_S_jilEnter(Sender: TObject);
+begin
+if (Edit_S_jil.value)>(Edit_S_ob.value) then Edit_S_ob.value:=Edit_S_jil.value;
+end;
+
+procedure TAddUr.Edit_S_KuhEnter(Sender: TObject);
+begin
+ if ((Edit_S_Kuh.value)>(Edit_S_jil.value)) or
+ ((Edit_S_Kuh.value)>(Edit_S_ob.value)) then Edit_S_Kuh.value:=Edit_S_jil.value;
+end;
+
+procedure TAddUr.Edit_S_obEnter(Sender: TObject);
+begin
+ if (Edit_S_ob.value)<(Edit_S_jil.value)  then Edit_S_jil.value:=Edit_S_ob.value;
+end;
+
+procedure TAddUr.Edit_S_obKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+if Key=46 then (Sender as TcxCurrencyEdit).value:=0;
+end;
+
+procedure TAddUr.Edit_S_obKeyPress(Sender: TObject; var Key: Char);
+begin
+if not (Key in ['0'..'9',#13,#8]) then Key:= #0;
+end;
+
+procedure TAddUr.FormCreate(Sender: TObject);
+begin
+SliderOtchet.SliderOn:=true;
+sPagecontrol1.ActivePageIndex:=0;
+end;
+
+procedure TAddUr.KCombo_kol_sobstPropertiesChange(Sender: TObject);
+ var kol: integer;
+begin
+if KCombo_sobstv_kids.text='' then KCombo_sobstv_kids.text:='0';
+if KCombo_sobstv_kids.ItemIndex=0 then  kol:=0 else kol:=KCombo_sobstv_kids.ItemIndex;
+if KCombo_kol_sobst.ItemIndex<=kol then KCombo_sobstv_kids.ItemIndex:=KCombo_kol_sobst.ItemIndex;
+if KCombo_kol_sobst.ItemIndex=0 then KCombo_sobstv_kids.ItemIndex:=0;
+end;
+
+procedure TAddUr.Save_buttonClick(Sender: TObject);
+begin
+if Otdel_komun.EditValue=null then Otdel_komun.EditValue:=0;
+if reklama.EditValue=null then reklama.EditValue:=0;
+if AddUr.Manager.EditValue=null then AddUr.Manager.EditValue:=0;
+if Tip_dogovora.EditValue=null then Tip_dogovora.EditValue:=0;
+
+
+
+//---------------Добавление в коммерческую таблицу------------- //
+if spagecontrol1.ActivePage=sTabKom then begin
+with Query do
+begin
+
+query.Close;
+query.sql.clear;
+query.sql.text:='insert INTO Kommerciya (Time,	date,	Rub,	vid_reklamiID,	Fam,	Name,	Otch,	tel,	email, PolID, tip_dogovoraID'+
+',otdelnih_komnat, mteroID, Udal_metro, Udal_metroPTID, street, S_house, Etaj, Etajnost, tip_domaID, sanuzelID, BalkonID '+
+',NaznachenieID,	Elektrika,	Kommentarii,	Klass_houseID,	Vsobstven_let,	Tip_zdaniyaID,	kolSobV,	kolSobNL, Bathroom_kol, Balkon_kol, date_sozvon)' +
+' values(:p_Time,:p_date,:p_Rub,:p_vid_reklamiID,:p_Fam,:p_Name,:p_Otch,:p_tel,:p_email,:p_PolID,:p_tipdogovoraID,'
++':p_otdelnih_komnat, :p_mteroID, :p_Udal_metro, :p_Udal_metroPTID, :p_street, :p_S_house, :p_Etaj, :p_Etajnost, :p_tip_domaID, :p_sanuzelID, :p_BalkonID'+
+',:p_NaznachenieID,	:p_Elektrika,	:p_Kommentarii,	:p_Klass_houseID,	:p_Vsobstven_let,	:p_Tip_zdaniyaID,	:p_kolSobV,	:p_kolSobNL, :p_Bathroom_kol, :p_Balkon_kol, :p_date_sozvon)';
+
+query.ParamByName('p_Time').asstring:=sTimePicker1.Text;
+query.ParamByName('p_date').asDateTime:=sDateEdit1.Date;
+query.ParamByName('p_vid_reklamiID').asInteger:=reklama.EditValue;
+query.ParamByName('p_Fam').asString:=Fam.text;
+query.ParamByName('p_Name').asString:=Name1.text;
+query.ParamByName('p_Otch').asString:=Otch.text;
+query.ParamByName('p_tel').asString:=sMaskEdit1.text;
+query.ParamByName('p_email').asString:=email.text;
+if sradiogroup1.ItemIndex=-1 then query.ParamByName('p_PolID').AsInteger:=0;
+if sradiogroup1.ItemIndex=0 then query.ParamByName('p_PolID').AsInteger:=1;
+if sradiogroup1.ItemIndex=1 then query.ParamByName('p_PolID').AsInteger:=2;
+query.ParamByName('p_tipdogovoraID').AsInteger:=KCombo_Tip_Dogovora.EditValue;
+query.ParamByName('p_mteroID').asInteger:=KCombo_Metro.EditValue;
+query.ParamByName('p_Udal_metroPTID').asInteger:=KCombo_Metro_PT.EditValue;
+query.ParamByName('p_Tip_zdaniyaID').asInteger:=KCombo_TipZdaniya.EditValue;
+query.ParamByName('p_tip_domaID').asInteger:=KCombo_TipDoma.EditValue;
+query.ParamByName('p_NaznachenieID').asInteger:=KCombo_Naznachenie.EditValue;
+query.ParamByName('p_Klass_houseID').asInteger:=KCombo_Class.EditValue;
+query.ParamByName('p_sanuzelID').asInteger:=KCombo_Bathroom.EditValue;
+query.ParamByName('p_BalkonID').asInteger:=KCombo_Balkon.EditValue;
+query.ParamByName('p_Bathroom_kol').asInteger:=strtoint(KCombo_Sanuzel_kol.text);
+query.ParamByName('p_otdelnih_komnat').asInteger:=strtoint(KCombo_Komnat.text);
+query.ParamByName('p_Balkon_kol').asInteger:=strtoint(KCombo_Balkon_kol.text);
+query.ParamByName('p_kolSobV').asInteger:=strtoint(KCombo_kol_sobst.text);
+if KCombo_sobstv_kids.ItemIndex=0 then
+begin
+query.ParamByName('p_kolSobNL').DataType:=ftString;
+query.ParamByName('p_kolSobNL').Value:=Null;
+end else query.ParamByName('p_kolSobNL').AsInteger:=strtoint(KCombo_sobstv_kids.Text);
+query.ParamByName('p_Vsobstven_let').asInteger:=strtoint(KEdit_Vsobstven.text);
+query.ParamByName('p_Rub').asInteger:=Trunc(KEdit_Rub.value);
+query.ParamByName('p_Udal_metro').asInteger:=strtoint(KEdit_Metro_Min.text);
+query.ParamByName('p_street').asString:=KEdit_street.text;
+query.ParamByName('p_S_house').AsFloat:=KSDoma.value;
+query.ParamByName('p_Etaj').asInteger:=strtoint(KEdit_Etaj.text);
+query.ParamByName('p_Etajnost').asInteger:=strtoint(KEdit_Etajnost.text);
+query.ParamByName('p_Elektrika').AsFloat:=KEdit_Electrika.value;
+query.ParamByName('p_Kommentarii').asString:=KKoment.text;
+query.ParamByName('p_date_sozvon').asDateTime:=KDate_sozvon.Date;
+
+query.OpenOrExecute;
+query.Close;
+module.QKommerciya.Refresh;
+end;
+end;
+
+
+//---------------Добавление в загородную таблицу------------- //
+if spagecontrol1.ActivePage=sTabZag then begin
+with Query do
+begin
+
+query.Close;
+query.sql.clear;
+query.sql.text:='insert INTO ZagorodRieltorskaya (Time,	date,	Rub,	vid_reklamiID,	Fam,	Name,	Otch,	tel,	email, PolID, tip_dogovoraID'+
+',DocumentiID, ShosseID,Udalkm,GasID,'
++'VodaID,otoplenieID,etajnost,ElectroID,kanalizaciyaID,mat_stenID,PodezdID,'
++'Vsobstven_let,Kommentarii,Naseleniy_punkt,Stanciya_JD,Udal_stancya,S_uchastka,S_doma,date_sozvon)'+
+' values(:p_Time,:p_date,:p_Rub,:p_vid_reklamiID,:p_Fam,:p_Name,:p_Otch,:p_tel,:p_email,:p_PolID,:p_tipdogovoraID, :p_DocumentiID,'
++':p_ShosseID,:p_Udalkm,:p_GasID,'
++':p_VodaID,:p_otoplenieID,:p_etajnost,:p_ElectroID,:p_kanalizaciyaID,:p_mat_stenID,:p_PodezdID,'
++':p_Vsobstven_let,:p_Kommentarii,:p_Naseleniy_punkt,:p_Stanciya_JD,:p_Udal_stancya,:p_S_uchastka,:p_S_doma,:p_date_sozvon)';
+
+query.ParamByName('p_Time').asstring:=sTimePicker1.Text;
+query.ParamByName('p_date').asDateTime:=sDateEdit1.Date;
+query.ParamByName('p_vid_reklamiID').asinteger:=reklama.EditValue;
+query.ParamByName('p_Fam').asString:=Fam.text;
+query.ParamByName('p_Name').asString:=Name1.text;
+query.ParamByName('p_Otch').asString:=Otch.text;
+query.ParamByName('p_tel').asString:=sMaskEdit1.text;
+query.ParamByName('p_email').asString:=email.text;
+if sradiogroup1.ItemIndex=-1 then query.ParamByName('p_PolID').AsInteger:=0;
+if sradiogroup1.ItemIndex=0 then query.ParamByName('p_PolID').AsInteger:=1;
+if sradiogroup1.ItemIndex=1 then query.ParamByName('p_PolID').AsInteger:=2;
+query.ParamByName('p_tipdogovoraID').AsInteger:=ZCombo_Tip_Dogovora.EditValue;
+query.ParamByName('p_Rub').AsInteger:=Trunc(ZEdit_Rub.value);
+query.ParamByName('p_DocumentiID').AsInteger:=ZCombo_Documenti.EditValue;
+query.ParamByName('p_ShosseID').AsInteger:=ZShosse.EditValue;
+query.ParamByName('p_Udalkm').AsFloat:=ZUdal.value;
+query.ParamByName('p_GasID').AsInteger:=ZGaz.EditValue;
+query.ParamByName('p_VodaID').AsInteger:=ZVoda.EditValue;
+query.ParamByName('p_otoplenieID').AsInteger:=ZOtoplenie.EditValue;
+query.ParamByName('p_etajnost').AsInteger:=ZEtajnost.EditValue;
+query.ParamByName('p_ElectroID').AsInteger:=ZEletrichestvo.EditValue;
+query.ParamByName('p_kanalizaciyaID').AsInteger:=ZKanalizaciya.EditValue;
+query.ParamByName('p_mat_stenID').AsInteger:=ZMat_sten.EditValue;
+query.ParamByName('p_PodezdID').AsInteger:=ZPodjezd.EditValue;
+query.ParamByName('p_Vsobstven_let').AsInteger:=strtoint(ZEdit_Vsobstven.Text);
+query.ParamByName('p_Kommentarii').asString:=ZKoment.text;
+query.ParamByName('p_Naseleniy_punkt').asString:=ZNaselen_punkt.text;
+query.ParamByName('p_Stanciya_JD').asString:=ZStanciyaJD.text;
+query.ParamByName('p_Udal_stancya').AsFloat:=ZUdal_JD.value;
+query.ParamByName('p_S_uchastka').AsFloat:=ZSUchastka.value;
+query.ParamByName('p_S_doma').AsFloat:=ZSDoma.value;
+query.ParamByName('p_date_sozvon').asDateTime:=ZDate_sozvon.Date;
+
+
+query.OpenOrExecute;
+query.Close;
+module.QZagorodRieltorskaya.Refresh;
+end;
+end;
+//---------------Добавление в риелторскую таблицу------------- //
+if spagecontrol1.ActivePage=sTabK then begin
+with Query do
+begin
+
+query.Close;
+query.sql.clear;
+query.sql.text:='insert INTO rieltorskaya (Time,	date,	Rub,	vid_reklamiID,	Fam,	Name,	Otch,	tel,	email, PolID, tipdogovoraID'+
+',komnat'+
+',Otdel_komunnID'+
+',propiska'+
+',metroID'+
+',Udal_metro'+
+',Udal_metroPT'+
+',Street'+
+',S_house'+
+',S_jilaya'+
+',S_chik'+
+',Komnat_izolID'+
+',Tip_domaID'+
+',Etaj'+
+',Etajnost'+
+',BathroomID'+
+',Bathroom_kol'+
+',BalkonID'+
+',Balkon_kol'+
+',PlitaID '+
+',LiftID'+
+',Primechanie'+
+',ManagerID'+
+',date_sozvon'+
+',DocumentiID'+
+',Vsobstven_let'+
+',tip_sdelkiID'+
+',kolSobV'+
+',kolSobNL)'+
+'values(:p_Time,:p_date,:p_Rub,:p_vid_reklamiID,:p_Fam,:p_Name,:p_Otch,:p_tel,:p_email,:p_PolID,:p_tipdogovoraID'+
+',:p_komnat,:p_Otdel_komunnID,:p_propiska,:p_metroID,:p_Udal_metro,:p_Udal_metroPT'+
+',:p_Street,:p_S_house,:p_S_jilaya,:p_S_chik,:p_Komnat_izolID,:p_Tip_domaID,:p_Etaj,:p_Etajnost'+
+',:p_BathroomID,:p_Bathroom_kol,:p_BalkonID,:p_Balkon_kol,:p_PlitaID,:p_LiftID,:p_Primechanie,:p_ManagerID'+
+',:p_date_sozvon,:p_DocumentiID,:p_Vsobstven_let,:p_tip_sdelkiID,:p_kolSobV,:p_kolSobNL)';
+
+query.ParamByName('p_Time').asstring:=sTimePicker1.Text;
+query.ParamByName('p_date').asDateTime:=sDateEdit1.Date;
+query.ParamByName('p_Rub').AsInteger:=Trunc(Edit_Rub.value);
+query.ParamByName('p_vid_reklamiID').asinteger:=reklama.EditValue;
+query.ParamByName('p_Fam').asString:=Fam.text;
+query.ParamByName('p_Name').asString:=Name1.text;
+query.ParamByName('p_Otch').asString:=Otch.text;
+query.ParamByName('p_tel').asString:=sMaskEdit1.text;
+query.ParamByName('p_email').asString:=email.text;
+if sradiogroup1.ItemIndex=-1 then query.ParamByName('p_PolID').AsInteger:=0;
+if sradiogroup1.ItemIndex=0 then query.ParamByName('p_PolID').AsInteger:=1;
+if sradiogroup1.ItemIndex=1 then query.ParamByName('p_PolID').AsInteger:=2;
+query.ParamByName('p_tipdogovoraID').AsInteger:=Combo_Tip_Dogovora.EditValue;
+query.ParamByName('p_komnat').AsInteger:=strtoint(Combo_Komnat.Text);
+query.ParamByName('p_Otdel_komunnID').AsInteger:=Combo_Otdelnaya.EditValue;
+query.ParamByName('p_propiska').AsInteger:=strtoint(Combo_Propisanno.Text);
+query.ParamByName('p_metroID').AsInteger:=Combo_Metro.EditValue;
+query.ParamByName('p_Udal_metro').AsInteger:=strtoint(Edit_Metro_Min.Text);
+query.ParamByName('p_Udal_metroPT').AsInteger:=Combo_Metro_PT.EditValue;
+query.ParamByName('p_Street').AsString:=Edit_street.Text;
+query.ParamByName('p_S_house').AsFloat :=Edit_S_ob.value;
+query.ParamByName('p_S_jilaya').AsFloat:=Edit_S_jil.value;
+query.ParamByName('p_S_chik').AsFloat:=Edit_S_Kuh.value;
+query.ParamByName('p_Komnat_izolID').AsInteger:=Combo_Izolaciya.EditValue;
+query.ParamByName('p_Tip_domaID').AsInteger:=Combo_Tip_doma.EditValue;
+query.ParamByName('p_Etaj').AsInteger:=strtoint(Edit_Etaj.Text);
+query.ParamByName('p_Etajnost').AsInteger:=strtoint(Edit_Etajnost.Text);
+query.ParamByName('p_BathroomID').AsInteger:=Combo_Bathroom.EditValue;
+query.ParamByName('p_Bathroom_kol').AsInteger:=strtoint(Combo_Sanuzel_kol.Text);
+query.ParamByName('p_BalkonID').AsInteger:=Combo_Balkon.EditValue;
+query.ParamByName('p_Balkon_kol').AsInteger:=strtoint(Combo_Balkon_kol.Text);
+query.ParamByName('p_PlitaID').AsInteger:=Combo_Plita.EditValue;
+query.ParamByName('p_LiftID').AsInteger:=Combo_Lift.EditValue;
+query.ParamByName('p_Primechanie').AsString:=Primechanie.Text;
+query.ParamByName('p_ManagerID').AsInteger:=Manager.EditValue;
+query.ParamByName('p_date_sozvon').asDateTime:=Date_Sozvon_komnata.Date;
+query.ParamByName('p_DocumentiID').AsInteger:=Combo_Documenti.EditValue;
+query.ParamByName('p_Vsobstven_let').AsInteger:=strtoint(Edit_Vsobstven.Text);
+query.ParamByName('p_tip_sdelkiID').AsInteger:=Combo_Alternativa.EditValue;
+query.ParamByName('p_kolSobV').AsInteger:=strtoint(Combo_kol_sobst.Text);
+if Combo_sobstv_kids.ItemIndex=0 then
+begin
+query.ParamByName('p_kolSobNL').DataType:=ftString;
+query.ParamByName('p_kolSobNL').Value:=Null;
+end else
+query.ParamByName('p_kolSobNL').AsInteger:=strtoint(Combo_sobstv_kids.Text);
+query.OpenOrExecute;
+query.Close;
+module.QRieltorskaya.Refresh;
+end;
+end;
+
+
+
+//---------------Добавление в юридическую таблицу------------- //
+if spagecontrol1.ActivePage=sTabUr  then begin
+with Query do
+begin
+if Otdel_komun.EditValue=null then Otdel_komun.EditValue:=0;
+if reklama.EditValue=null then reklama.EditValue:=0;
+if AddUr.Manager.EditValue=null then AddUr.Manager.EditValue:=0;
+if Tip_dogovora.EditValue=null then Tip_dogovora.EditValue:=0;
+
+query.Close;
+query.sql.clear;
+query.sql.text:='insert INTO uridicheskaya (Time,	date,	Rub,	vid_reklamiID,	Fam,	Name,	Otch,	tel,	email, PolID, tipdogovoraID, otedelID, propiska, datesozvon, ManagerID,	Kommentariy) values(:t,:d,:r,:v,:f,:n,:o,:tt,:e,:p,:td,:ot,:pr,:ds,:m,:k)';
+query.params[0].asString:=sTimePicker1.Text;
+query.params[1].asDateTime:=sDateEdit1.Date;
+query.params[2].asInteger:=Trunc(Stoimost_rub.value);
+query.params[3].AsInteger:=reklama.EditValue;
+query.params[4].asString:=Fam.text;
+query.params[5].asString:=Name1.text;
+query.params[6].asString:=Otch.text;
+query.params[7].asString:=sMaskEdit1.text;
+query.params[8].asString:=email.text;
+if sradiogroup1.ItemIndex=-1 then query.params[9].AsInteger:=0;
+if sradiogroup1.ItemIndex=0 then query.params[9].AsInteger:=1;
+if sradiogroup1.ItemIndex=1 then query.params[9].AsInteger:=2;
+query.params[10].asString:=Tip_dogovora.EditValue;
+query.params[11].asString:=Otdel_komun.EditValue;
+query.params[12].asinteger:=strtoint(Propisano.Text);
+query.params[13].asDateTime:=Date_sozvon.Date;
+query.params[14].AsInteger:=Manager.EditValue;
+query.params[15].asString:=sMemo1.Text;
+query.OpenOrExecute;
+query.Close;
+module.Uridicheskaya.Refresh;
+end;
+end;
+
+end;
+
+procedure TAddUr.sButton1Click(Sender: TObject);
+begin
+ Save_button.Click;
+ close;
+end;
+
+procedure TAddUr.sButton3Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TAddUr.SliderOtchetChanging(Sender: TObject; var CanChange: Boolean);
+begin
+if SliderOtchet.SliderOn=false then begin
+  spagecontrol1.ActivePage:=sTabK;
+  sTabK.Enabled :=true;
+  sTabZag.Enabled:=true;
+  sTabKom.Enabled:=true;
+  sTabUr.Enabled:=false;
+end;
+if SliderOtchet.SliderOn=true  then begin
+    spagecontrol1.ActivePage:=sTabUr;
+  sTabK.Enabled:=false;
+  sTabZag.Enabled:=false;
+  sTabKom.Enabled:=false;
+  sTabUr.Enabled:=true;
+
+end;
+end;
+
+procedure TAddUr.sMaskEdit1Change(Sender: TObject);
+begin
+TsMaskEdit(Sender).Modified := False;
+end;
+
+end.

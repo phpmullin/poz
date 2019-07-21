@@ -1,0 +1,85 @@
+unit Unit5;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxStyles, dxSkinsCore, dxSkinsDefaultPainters,
+  cxCustomData, cxFilter, cxData, cxDataStorage, cxEdit, cxNavigator,
+  dxDateRanges, cxDataControllerConditionalFormattingRulesManagerDialog,
+  Data.DB, cxDBData, Vcl.StdCtrls, sButton, Vcl.ExtCtrls, sPanel, cxGridLevel,
+  cxClasses, cxGridCustomView, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxGrid, dxBarCode, cxVGrid, cxDBVGrid, cxInplaceContainer,
+  cxDBLookupComboBox, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TDBMore = class(TForm)
+    sPanel1: TsPanel;
+    sButton1: TsButton;
+    cxDBVerticalGrid1: TcxDBVerticalGrid;
+    cxDBVerticalGrid1checking: TcxDBEditorRow;
+    cxDBVerticalGrid1time: TcxDBEditorRow;
+    cxDBVerticalGrid1date: TcxDBEditorRow;
+    cxDBVerticalGrid1Fam: TcxDBEditorRow;
+    cxDBVerticalGrid1Name: TcxDBEditorRow;
+    cxDBVerticalGrid1Otch: TcxDBEditorRow;
+    cxDBVerticalGrid1tel: TcxDBEditorRow;
+    cxDBVerticalGrid1email: TcxDBEditorRow;
+    cxDBVerticalGrid1tipdogovoraID: TcxDBEditorRow;
+    cxDBVerticalGrid1komnat: TcxDBEditorRow;
+    cxDBVerticalGrid1Otdel_komunnID: TcxDBEditorRow;
+    cxDBVerticalGrid1propiska: TcxDBEditorRow;
+    cxDBVerticalGrid1metroID: TcxDBEditorRow;
+    cxDBVerticalGrid1Udal_metro: TcxDBEditorRow;
+    cxDBVerticalGrid1Udal_metroPT: TcxDBEditorRow;
+    cxDBVerticalGrid1Street: TcxDBEditorRow;
+    cxDBVerticalGrid1S_house: TcxDBEditorRow;
+    cxDBVerticalGrid1S_jilaya: TcxDBEditorRow;
+    cxDBVerticalGrid1S_chik: TcxDBEditorRow;
+    cxDBVerticalGrid1Komnat_izolID: TcxDBEditorRow;
+    cxDBVerticalGrid1Tip_domaID: TcxDBEditorRow;
+    cxDBVerticalGrid1Etaj: TcxDBEditorRow;
+    cxDBVerticalGrid1Etajnost: TcxDBEditorRow;
+    cxDBVerticalGrid1BathroomID: TcxDBEditorRow;
+    cxDBVerticalGrid1Bathroom_kol: TcxDBEditorRow;
+    cxDBVerticalGrid1BalkonID: TcxDBEditorRow;
+    cxDBVerticalGrid1Balkon_kol: TcxDBEditorRow;
+    cxDBVerticalGrid1PlitaID: TcxDBEditorRow;
+    cxDBVerticalGrid1LiftID: TcxDBEditorRow;
+    cxDBVerticalGrid1Primechanie: TcxDBEditorRow;
+    cxDBVerticalGrid1ManagerID: TcxDBEditorRow;
+    cxDBVerticalGrid1Rub: TcxDBEditorRow;
+    cxDBVerticalGrid1date_sozvon: TcxDBEditorRow;
+    cxDBVerticalGrid1DocumentiID: TcxDBEditorRow;
+    cxDBVerticalGrid1Vsobstven_let: TcxDBEditorRow;
+    cxDBVerticalGrid1tip_sdelkiID: TcxDBEditorRow;
+    cxDBVerticalGrid1kolSobV: TcxDBEditorRow;
+    cxDBVerticalGrid1kolSobNL: TcxDBEditorRow;
+    cxDBVerticalGrid1vid_reklamiID: TcxDBEditorRow;
+    cxDBVerticalGrid1PolID: TcxDBEditorRow;
+    cxDBVerticalGrid1Tipdoma_name: TcxDBEditorRow;
+    cxDBVerticalGrid1Name_1: TcxDBEditorRow;
+    cxDBVerticalGrid1Balkon: TcxDBEditorRow;
+    cxDBVerticalGrid1etajy: TcxDBEditorRow;
+    cxDBVerticalGrid1CategoryRow1: TcxCategoryRow;
+    Query: TFDQuery;
+    DataSource: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DBMore: TDBMore;
+
+implementation
+
+{$R *.dfm}
+uses Unit3;
+
+end.
