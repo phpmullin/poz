@@ -1522,6 +1522,7 @@ object Form2: TForm2
     Width = 121
     Height = 97
     TabOrder = 8
+    Visible = False
     OnDblClick = sListBox1DblClick
   end
   object FDConnection1: TFDConnection
